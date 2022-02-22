@@ -1,4 +1,5 @@
 import numpy as np
+from sklearn.model_selection import train_test_split
 
 
 def haversine_vectorized(df,
@@ -28,3 +29,6 @@ def haversine_vectorized(df,
 
 def compute_rmse(y_pred, y_true):
     return np.sqrt(((y_pred - y_true) ** 2).mean())
+
+def holdout(X, y):
+    return train_test_split(X, y, test_size=0.2, random_state=1)

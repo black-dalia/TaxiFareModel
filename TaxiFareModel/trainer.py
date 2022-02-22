@@ -38,7 +38,7 @@ class Trainer():
         self.pipeline = Pipeline([
         ('preproc', preproc_pipe),
         ('linear_model', LinearRegression())
-])
+        ])
         return self.pipeline
 
     def run(self):
